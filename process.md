@@ -17,4 +17,5 @@
     print(django.get_version())
 11. Install webserver and fastcgi (Apache with mod_wsgi works as well as uwsgi)
     aptitude install nginx python-flup
-
+12. Create directory to run django from, here we choose /opt due to http://www.pathname.com/fhs/pub/fhs-2.3.pdf
+    mkdir -p django_apps
