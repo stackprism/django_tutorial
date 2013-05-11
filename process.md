@@ -11,4 +11,8 @@
     curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 8. Install pip
     python get-pip.py
+9. Install django
+    pip install django
+10. Install webserver and fastcgi (Apache with mod_wsgi works as well as uwsgi)
+    aptitude install nginx python-flup
 
