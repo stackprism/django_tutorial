@@ -1,3 +1,4 @@
+#NOTE there are not sudo prefixes here, you can run this however you want, we just omit all command prefixes
 1. Created "django_tutorial" repository on Github
 2. Launched "django" EC2 machine on AWS
 3. Setup DynDNS
@@ -18,7 +19,12 @@
 11. Install webserver and fastcgi (Apache with mod_wsgi works as well as uwsgi)
     aptitude install nginx python-flup
 12. Create directory to run django from, here we choose /opt due to http://www.pathname.com/fhs/pub/fhs-2.3.pdf
-    mkdir -p django_apps
-13. Copy file from nginx/intro_site.conf into /etc/nginx/sites-available/ and link file into site-enabled Make sure to change the site name
+    mkdir -p /opt/django_apps
+13. Create the intro project
+    cd /opt/django_apps && django-admin.py startproject intro
+14. Copy file from nginx/intro_site.conf into /etc/nginx/sites-available/ and link file into site-enabled Make sure to change the site name
     cp nginx/intro_site.conf /etc/nginx/sites_available/introsite.conf
     ln -s /etc/nginx/sites-available/intro_site.conf /etc/nginx/sites-enabled/intro_site.conf
+15. Start python via CGI (This needs a wrapper obvs)
+    python ./manage.py runfcgi host=127.0.0.1 port=8080
+16. Hit your page!
