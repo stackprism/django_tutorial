@@ -13,6 +13,8 @@
     python get-pip.py
 9. Install django
     pip install django
-10. Install webserver and fastcgi (Apache with mod_wsgi works as well as uwsgi)
+10. Verify correct django installation
+    print(django.get_version())
+11. Install webserver and fastcgi (Apache with mod_wsgi works as well as uwsgi)
     aptitude install nginx python-flup
 
