@@ -29,12 +29,17 @@
     python ./manage.py runfcgi host=127.0.0.1 port=8080
 16. Hit your page!
 17. Log in to mysql and run `create database 'django_intro';`
-18. Edit settings.py, add `.mysql` to the database type, fill in the database, user, password, and host fields
+18. Edit settings.py, add .mysql to the database type, fill in the database, user, password, and host fields
 19. Update timezone in settings.py
 20. Python manage.py syncdb
 21. Python startapp tweetgramsandwich
-22. Edit models.py to have a Search model with fields for ip_address, query, query_time, twitter_url and instagram_url
-23. We chose to use https://github.com/sixohsix/twitter so clone that and setup install
+22. We chose to use https://github.com/sixohsix/twitter so clone that and setup install
     cd ~/ git clone --recursive https://github.com/sixohsix/twitter 
     cd twitter 
     python setup.py install
+23. Edit models.py to have a Search model with fields for ip_address, query, query_time, twitter_url, instagram_url and a unicode return function for shell inspection
+24. Edit settings.py to include tweetgramsandwich to the list of installed apps
+25. python manage.py sql tweetgramsandwich
+26. python manage.py syncdb
+27. Sign up with twitter and get a twitter application @StackerJoe and app name tweetgrahamsandwich
+28. Get the oauth keys and credentials
