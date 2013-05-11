@@ -34,3 +34,7 @@
 20. Python manage.py syncdb
 21. Python startapp tweetgramsandwich
 22. Edit models.py to have a Search model with fields for ip_address, query, query_time, twitter_url and instagram_url
+23. We chose to use https://github.com/sixohsix/twitter so clone that and setup install
+    cd ~/ git clone --recursive https://github.com/sixohsix/twitter 
+    cd twitter 
+    python setup.py install
