@@ -19,3 +19,6 @@
     aptitude install nginx python-flup
 12. Create directory to run django from, here we choose /opt due to http://www.pathname.com/fhs/pub/fhs-2.3.pdf
     mkdir -p django_apps
+13. Copy file from nginx/intro_site.conf into /etc/nginx/sites-available/ and link file into site-enabled Make sure to change the site name
+    cp nginx/intro_site.conf /etc/nginx/sites_available/introsite.conf
+    ln -s /etc/nginx/sites-available/intro_site.conf /etc/nginx/sites-enabled/intro_site.conf
