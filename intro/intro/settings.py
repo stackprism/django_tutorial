@@ -1,5 +1,12 @@
 # Django settings for intro project.
 
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = BASE_DIR
+
+#Twitter Credentials
+TWITTER_CREDS = os.path.join(PROJECT_DIR, '.twitter_creds')
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
