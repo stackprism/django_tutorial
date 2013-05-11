@@ -5,8 +5,8 @@
     dpkg -l python | grep 2.7
 5. If using pip for django installation make sure you have python-setuptools installed
     apt-get install python-setuptools
-6. Install the database of choice, if not using the internal one
-    apt-get install mysql-server -y 
+6. Install the database of choice, if not using the internal one, additionally install the appropriate python module (I like to install the debug when first learning)
+    apt-get install python-mysqldb python-mysqldb-dbg mysql-server -y 
 7. Download pip for installation
     curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 8. Install pip
