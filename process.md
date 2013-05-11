@@ -29,8 +29,11 @@
     python ./manage.py runfcgi host=127.0.0.1 port=8080
 16. Hit your page!
 17. Log in to mysql and run `create database 'django_intro';`
-18. Edit settings.py, add `.mysql` to the database type, fill in the database, user, password, and host fields
+18. Edit settings.py, add .mysql to the database type, fill in the database, user, password, and host fields
 19. Update timezone in settings.py
 20. Python manage.py syncdb
 21. Python startapp tweetgramsandwich
-22. Edit models.py to have a Search model with fields for ip_address, query, query_time, twitter_url and instagram_url
+22. Edit models.py to have a Search model with fields for ip_address, query, query_time, twitter_url, instagram_url and a unicode return function for shell inspection
+23. Edit settings.py to include tweetgramsandwich to the list of installed apps
+24. python manage.py sql tweetgramsandwich
+25. python manage.py syncdb
