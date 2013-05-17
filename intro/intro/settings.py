@@ -1,9 +1,8 @@
 # Django settings for intro project.
 
-#Instagram_Credentials
 
-#INSTA_CREDS = os.path.join(BASE_DIR, '.insta_creds')
 FORCE_SCRIPT_NAME = ' '
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
