@@ -43,3 +43,13 @@
 26. python manage.py syncdb
 27. Sign up with twitter and get a twitter application @StackerJoe and app name tweetgrahamsandwich
 28. Get the oauth keys and credentials
+29. FastCGI - so last year. uWSGI is the hotness. http://www.peterbe.com/plog/fcgi-vs-gunicorn-vs-uwsgi 
+    sudo apt-get install gcc build-essential
+    pip install was failing 
+        with error code 1 in /tmp/pip-build-root/uwsgi
+      solution
+    pip install versiontools
+    pip install uwsgi
+    mkdir /etc/uwsgi/vassals 
+    vim /etc/uwsgi/vassals/intro.ini
+30. Reconfigure the nginx, much of this was followed/inspired by http://bartek.im/blog/2012/07/08/simplicity-nginx-uwsgi-deployment.html
